@@ -1,0 +1,13 @@
+application: 1049393489993
+version: 1
+runtime: python3
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: .*
+  script: bot.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
