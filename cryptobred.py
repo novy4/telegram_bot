@@ -46,15 +46,14 @@ while True:
         cryptomessage = message.message
         if message.id > last:
             last = message.id
-            print(last)
+           # print(last)
         if cryptomessage != '':
             mesg1 = cryptomessage.encode('utf-8') 
-            print(mesg1)
+           # print(mesg1)
             client.send_message('cryptoanalizatorfeed', mesg1)
             time.sleep(1)
         else:
-            print('zero message')
-    
+            print(message.media.caption)
     time.sleep(30)
 if __name__ == "__main__":
     application.listen(8080)
